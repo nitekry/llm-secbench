@@ -105,3 +105,6 @@ It called every sample vulnerable. It found the bugs that sit on a dangerous cal
 - Logs are synthetic and simpler than real fleet telemetry.
 - Single-turn and no tools: this measures reading comprehension, not agentic investigation.
 - The model sees whole files with line numbers. There's no repository-scale context.
+
+## License
+MIT, see `LICENSE`.
