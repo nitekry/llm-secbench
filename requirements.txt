@@ -1,0 +1,12 @@
+# No third-party Python packages are needed: everything uses the standard library.
+# Python >= 3.8.
+#
+# System tools:
+#   required  - an OpenAI-compatible chat endpoint: llama.cpp `llama-server` (used by run.sh),
+#               Ollama, vLLM, LM Studio, ...
+#   required  - bash + curl (run.sh only)
+#   optional  - gcc  : gen_code.py syntax-checks the generated C tasks when available
+#   optional  - node : gen_code.py syntax-checks the generated JS tasks when available
+#
+# The Flask/Express/sqlite code in the tasks is only *read* by the model, never executed,
+# so Flask, Express, etc. do NOT need to be installed.

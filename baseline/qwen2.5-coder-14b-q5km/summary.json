@@ -1,0 +1,41 @@
+{
+ "label": "qwen2.5-coder-14b-q5km",
+ "scored_at": "2026-11-09T17:00:04",
+ "prompt_versions": [
+  1
+ ],
+ "tasks_done": 32,
+ "tasks_total": 32,
+ "errors": 0,
+ "invalid_json": 0,
+ "code": {
+  "n": 24,
+  "tp": 12,
+  "fp": 12,
+  "tn": 0,
+  "fn": 0,
+  "verdict_acc": 50.0,
+  "precision": 50.0,
+  "recall": 100.0,
+  "false_alarm_rate": 100.0,
+  "cwe_acc": 58.3,
+  "line_acc": 58.3,
+  "full_credit": 29.2
+ },
+ "logs": {
+  "n": 8,
+  "attacker_ip_acc": 100.0,
+  "technique_acc": 62.5,
+  "first_seen_acc": 75.0,
+  "account_acc": 100.0,
+  "full_acc": 62.5
+ },
+ "time": {
+  "total_s": 2281.5,
+  "prompt_tokens": 109440,
+  "completion_tokens": 3827,
+  "avg_pp_tok_s": 73.3,
+  "avg_tg_tok_s": 7.63
+ },
+ "overall_full_credit": 37.5
+}
