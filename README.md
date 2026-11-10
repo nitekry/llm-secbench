@@ -81,10 +81,14 @@ build_tasks.py     core suite: code twins from src/code (+ patches/CWE keys) and
 gen_code.py        gen suite: families, variants, randomization, syntax checks
 run_bench.py       runner, scorer, summaries, --aggregate
 run.sh             unattended llama-server wrapper
+make_bundle.sh     test, bundle and copy the repo for sharing
 src/code/          hand-written vulnerable sources; `@@VULN@@` marks the key line(s), stripped before prompting
 tests/             offline unit tests for the scorer and generator invariants
 baseline/          published reference results
 ```
+
+## Sharing
+`bash make_bundle.sh` runs the self-tests, writes a git bundle with the full history to `~/llm-secbench.bundle`, and puts a clean clone in `~/Documents/github/llm-secbench`. Later runs fast-forward that clone. Override the locations with `BUNDLE=...` and `DEST=...`. Only committed work is included. Recipients run `git clone llm-secbench.bundle`.
 
 ## Extending
 - **New gen family:** add an entry to `F` in `gen_code.py` with `lang`, `ext`, accepted `cwe` list, a `skel` (using `${...}` placeholders) and `variants` for `obvious`, `hidden`, `decoy` and `plain`. Put `# @@VULN@@`, `// @@VULN@@` or `/* @@VULN@@ */` on the flawed line(s) of the two vulnerable variants. Make sure `decoy` and `plain` are **actually safe**, or the false-alarm metric becomes unfair. Run the tests afterwards.
